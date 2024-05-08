@@ -1,0 +1,68 @@
+/* style.css */
+
+/* Resetando estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilizando o corpo da página */
+body {
+    background-color: #834cb1;
+    background-image: url(/Imagens/background_cadastro.jpg); /* Adicione o caminho para sua imagem de fundo */
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilizando a seção de login */
+section {
+    background-color: lightgrey;
+    width: 600px; /* Definindo a largura da seção */
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+/* Estilizando o formulário de login */
+form {
+    text-align: center;
+}
+
+/* Estilizando o título do formulário */
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Estilizando os campos de entrada */
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Estilizando o botão de login */
+input[type="submit"] {
+    background-color: #834cb1;
+    color: white;
+    cursor: pointer;
+}
+
+/* Estilizando o botão de login quando hover */
+input[type="submit"]:hover {
+    background-color: #4b116f;
+}
+
+#col-1, #col-2 {
+    float: left;
+    width: 50%;
+    padding: 20px;
+  }
