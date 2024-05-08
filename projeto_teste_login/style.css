@@ -9,9 +9,8 @@
 
 /* Estilizando o corpo da página */
 body {
-    background-image: url('caminho/para/sua/imagem.jpg'); /* Adicione o caminho para sua imagem de fundo */
+    background-image: url('/Imagens/background.jpg'); /* Adicione o caminho para sua imagem de fundo */
     background-size: cover;
-    background-position: center;
     font-family: Arial, sans-serif;
 }
 
@@ -51,12 +50,12 @@ input[type="submit"] {
 
 /* Estilizando o botão de login */
 input[type="submit"] {
-    background-color: #4CAF50;
+    background-color: #834cb1;
     color: white;
     cursor: pointer;
 }
 
 /* Estilizando o botão de login quando hover */
 input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #4b116f;
 }
