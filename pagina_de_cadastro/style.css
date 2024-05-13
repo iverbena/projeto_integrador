@@ -10,7 +10,7 @@
 /* Estilizando o corpo da página */
 body {
     background-color: #834cb1;
-    background-image: url(/Imagens/background_cadastro.jpg); /* Adicione o caminho para sua imagem de fundo */
+    background-image: url('../Imagens/background_cadastro.jpg'); /* Adicione o caminho para sua imagem de fundo */
     background-size: cover;
     font-family: Arial, sans-serif;
 }
@@ -40,7 +40,7 @@ h1 {
 /* Estilizando os campos de entrada */
 input[type="text"],
 input[type="password"],
-input[type="submit"] {
+input[type="email"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
