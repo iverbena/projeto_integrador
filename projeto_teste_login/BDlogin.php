@@ -15,7 +15,7 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) == 1) {
     // Login bem-sucedido
     $_SESSION['username'] = $username; // salvar o nome de usuário na sessão
-    header('Location: ../pagina_teste_pagina_inicial/pagina_inicial.php'); // redirecionar para a página do painel de controle
+    header('Location: ../projeto_teste_pagina_inicial/pagina_inicial.php'); // redirecionar para a página do painel de controle
 } else {
     // Login falhou
     echo "Nome de usuário ou senha incorretos.";
