@@ -9,8 +9,8 @@
 </head>
 <body>
     <header>
-        <img src="/Imagens/linha3.png" alt="" id="linha">
-        <img src="/Imagens/logo.png" alt="" id="logo">
+        <img src="../Imagens/linha3.png" alt="" id="linha">
+        <img src="../Imagens/logo.png" alt="" id="logo">
         <h1 id="subtitulo"><b>ENCONTRE SUA ALCATEIA</b></h1>
     </header>
     <section style="background-color: lightgrey;">

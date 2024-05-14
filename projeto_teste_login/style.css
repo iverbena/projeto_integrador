@@ -9,7 +9,7 @@
 
 /* Estilizando o corpo da página */
 body {
-    background-image: url('/Imagens/background.jpg'); /* Adicione o caminho para sua imagem de fundo */
+    background-image: url('../Imagens/background.jpg'); /* Adicione o caminho para sua imagem de fundo */
     background-size: cover;
     font-family: Arial, sans-serif;
 }
