@@ -22,7 +22,7 @@ section {
     padding: 20px;
     border-radius: 10px;
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 60%;
     transform: translate(-50%, -50%);
 }
@@ -54,6 +54,8 @@ input[type="submit"] {
     background-color: #834cb1;
     color: white;
     cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 /* Estilizando o botão de login quando hover */
@@ -65,4 +67,25 @@ input[type="submit"]:hover {
     float: left;
     width: 50%;
     padding: 20px;
+  }
+
+  #logo
+  {
+    width: 20%;
+    padding: 20px;
+    position: absolute;
+    top: 17.5%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+  }
+
+  #subtitulo
+  {
+    position: absolute;
+    top: 37.5%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: "time";
+    font-size: large;
   }

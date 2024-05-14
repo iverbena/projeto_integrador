@@ -29,7 +29,7 @@ if ($result_verificar_email->num_rows > 0) {
     $sql = "INSERT INTO usuarios (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Usuário cadastrado com sucesso!";
+        header('Location: ../projeto_sucesso_cadastro/sucesso_cadastro.php'); // redirecionar para a página do painel de controle
     } else {
         echo "Erro ao cadastrar usuário: " . $conn->error;
     }

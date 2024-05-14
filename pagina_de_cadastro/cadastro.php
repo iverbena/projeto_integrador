@@ -8,8 +8,8 @@
 </head>
 <body">
     <header style="text-align: center;">
-        <BR></BR>
-        <h1>LOGO</h1>
+        <img src="../Imagens/logo.png" alt="" id="logo">
+        <p id="subtitulo">ENCONTRE SUA ALCATEIA</p>
     </header>
     <section style="background-color: lightgrey;">
         <h1>Registre-se</h1>
@@ -24,7 +24,7 @@
     </form>
     </section>
     <div id="imagem">
-        <img src="../Imagens/fortnite_boneco.png" alt="">
+        <img id= 'boneco' src="../Imagens/fortnite_boneco.png" alt="">
     </div>
 </body>
 </html>
