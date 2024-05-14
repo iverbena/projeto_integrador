@@ -1,0 +1,12 @@
+create database projetoIntegrador;
+use projetoIntegrador;
+CREATE TABLE usuarios (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+cpf VARCHAR (11) ,
+nome VARCHAR(50) NOT NULL,
+email VARCHAR(50) NOT NULL UNIQUE,
+senha VARCHAR(255) NOT NULL,
+endereco varchar(255) ,
+cidade varchar(100) ,
+estado varchar(2),
+telefone varchar(11) );
