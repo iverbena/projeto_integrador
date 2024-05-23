@@ -1,5 +1,7 @@
 /* style.css */
 
+/* style.css */
+
 /* Resetando estilos padrão */
 * {
     margin: 0;
@@ -10,7 +12,6 @@
 /* Estilizando o corpo da página */
 body {
     background-color: #834cb1;
-    background-image: url('../Imagens/background_cadastro.jpg'); /* Adicione o caminho para sua imagem de fundo */
     background-size: cover;
     font-family: Arial, sans-serif;
 }
@@ -18,12 +19,13 @@ body {
 /* Estilizando a seção de login */
 section {
     background-color: lightgrey;
-    width: 600px; /* Definindo a largura da seção */
+    width: 100%; /* Definindo a largura da seção */
+    max-width: 450px;
     padding: 20px;
     border-radius: 10px;
     position: absolute;
-    top: 70%;
-    left: 60%;
+    top: 65%;
+    left: 49%;
     transform: translate(-50%, -50%);
 }
 
@@ -43,7 +45,7 @@ input[type="password"],
 input[type="email"] {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
@@ -71,21 +73,72 @@ input[type="submit"]:hover {
 
   #logo
   {
-    width: 20%;
+    width: 100%;
+    max-width: 160px;
     padding: 20px;
     position: absolute;
-    top: 17.5%;
-    left: 60%;
-    transform: translate(-50%, -50%);
+    top: 15%;
+    left: 35%;
+    transform:translate(-50%, -50%); 
   }
 
   #subtitulo
   {
     position: absolute;
-    top: 37.5%;
-    left: 60%;
+    top: 17%;
+    left: 65%;
+    width: 43%;
     transform: translate(-50%, -50%);
     color: white;
     font-family: "time";
     font-size: large;
+  }
+
+  @media screen and (max-width:868px) {
+
+    #boneco{
+        width: 100%;
+    max-width: 110px;
+    padding: 20px;
+    position: absolute;
+    top: 20%;
+    left: 9%;
+    transform:translate(-50%, -50%); 
+    }
+    
+    #logo
+    {
+      width: 100%;
+      max-width: 160px;
+      padding: 20px;
+      position: absolute;
+      top: 15%;
+      left: 35%;
+      transform:translate(-50%, -50%); 
+    }
+  
+    #subtitulo
+    {
+      position: absolute;
+      top: 16.5%;
+      left: 65%;
+      width: 35%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-family: "time";
+      font-size: large;
+    }
+    section {
+        background-color: lightgrey;
+        width: 100%; /* Definindo a largura da seção */
+        max-width: 400px;
+        max-height: 350px;
+        padding: 20px;
+        border-radius: 10px;
+        position: absolute;
+        top: 66%;
+        left: 49%;
+        transform: translate(-50%, -50%);
+    }
+  
   }
