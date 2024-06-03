@@ -11,8 +11,6 @@
 body {
     background-image: url('../Imagens/background.jpg'); /* Adicione o caminho para sua imagem de fundo */
     background-size: cover;
-    background-repeat: no-repeat;
-    background-color: #4b116f;
     font-family: Arial, sans-serif;
 }
 
@@ -67,14 +65,14 @@ input[type="submit"]:hover {
     padding: 20px;
     position: absolute;
     top: 17.5%;
-    left: 20%;
+    left: 30%;
     transform: translate(-50%, -50%);
 }
 
 #subtitulo{
     position: absolute;
-    top: 19%;
-    left: 50%;
+    top: 25%;
+    left: 55%;
     transform: translate(-50%, -50%);
     color: white;
     font-family: 'runtoe';
@@ -87,36 +85,4 @@ input[type="submit"]:hover {
     left: 60%;
     transform: translate(-50%, -50%);
     width: 70%;
-}
-@media screen and ( max-width: 768px) {
-
-    #logo{
-        width: 20%;
-        padding: 20px;
-        position: absolute;
-        top: 7%;
-        left: 50px;
-        transform: translate(-50%, -50%);
-    }
-    
-    #subtitulo{
-        position: absolute;
-        top: 8%;
-        left: 43%;
-        transform: translate(-50%, -50%);
-        color: white;
-        font-family: 'runtoe';
-        font-size: large;
-    }
-    section {
-        background-color: lightgrey;
-        width: 300px; /* Definindo a largura da seção */
-        padding: 20px;
-        border-radius: 10px;
-        position: absolute;
-        top: 72.5%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    
 }

@@ -1,3 +1,11 @@
+<?php
+
+include('protect.php')
+
+//http://localhost/integrador/projeto_teste_login/index.php
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -20,11 +28,7 @@
         <br><br><br>        
             <nav>           
                 <li>                                          
-                    <ul><div class="elemento"><button><a href="../projeto_teste_pagina_inicial/pagina_inicial.html">HOME</a></button></div></ul>                   
-                    <ul><div class="elemento"><button><a href="../menu_do_site/perfil.html">PERFIL</a></button></div></ul>                   
-                    <ul><div class="elemento"><button><a href="../menu_do_site/equipes.html">EQUIPES</a></button></div></ul>                
-                    <ul><div class="elemento"><button><a href="../menu_do_site/artigos.html">ARTIGOS</a></button></div></ul>                
-                    <ul><div class="elemento"><button><a href="../menu_do_site/pesquisa.html">PESQUISA</a></button></div></ul>                  
+                    <ul><div class="elemento"><button><a href="../logout/sair.php">sair</a></button></div></ul>                  
                 </li>
             </nav>                          
     </header>
@@ -38,16 +42,32 @@
             <h3>EQUIPES</h3>
             <nav class="sinza">
                     <button><a href="../menu_do_site/equipes.html">Criar Equipe</a></button>
-                    <button><a href="../menu_do_site/equipes.html">Procurar Equipe</a></button>
+                    <form action="pesquisa_equipe.php" method="get">
+                    <input type="text" name="query" placeholder="Digite sua pesquisa..." required>
+                     <button type="submit">Pesquisar</button>
+                    </form>
             </nav>
         </article>
         <br><br>
         <article>
             <article>
-                <h3>EQUIPES</h3>
+                <h3>ARTIGOS</h3>
                 <nav class="sinza">
                 <button><a href="../menu_do_site/artigos.html">Criar Artigo</a></button>
-                <button><a href="../menu_do_site/artigos.html">Procurar Artigo</a></button>
+                <form action="pesquisa_artigo.php" method="get">
+                    <input type="text" name="query" placeholder="Digite sua pesquisa..." required>
+                     <button type="submit">Pesquisar</button>
+                    </form>
+            </nav>
+        </article>
+        <article>
+            <article>
+                <h3>PESQUISA USUARIO</h3>
+                <nav class="sinza">
+                <form action="pesquisa_usuario.php" method="get">
+                    <input type="text" name="query" placeholder="Digite sua pesquisa..." required>
+                     <button type="submit">Pesquisar</button>
+                    </form>
             </nav>
         </article>
     </section>
