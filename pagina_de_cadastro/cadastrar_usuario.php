@@ -26,7 +26,7 @@ if ($result_verificar_email->num_rows > 0) {
     echo "Este email já está cadastrado.";
 } else {
     // Inserir dados na tabela
-    $sql = "INSERT INTO usuarios (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
+    $sql = "INSERT INTO usuarios (nome, email, senha, nick_name) VALUES ('$nome', '$email', '$senha', '$nome')";
 
     if ($conn->query($sql) === TRUE) {
         header('Location: ../projeto_sucesso_cadastro/sucesso_cadastro.php'); // redirecionar para a página do painel de controle
