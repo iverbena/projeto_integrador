@@ -2,17 +2,24 @@
 // Incluir o arquivo de conexão
 include 'conexao.php';
 
-// Obter o termo de pesquisa
+
+ // Obter o termo de pesquisa
 $query = isset($_GET['query']) ? $_GET['query'] : '';
 
+// Ajustar o termo de pesquisa para SQL
+$search_artigos = '%' . $query . '%';
 
-// Preparar a consulta para Artigos
- $sql_artigos = $conn->prepare("SELECT * FROM artigos WHERE titulo LIKE ? OR conteudo LIKE ?");
- $search_query = "%$query%";
- $sql_artigos->bind_param("ss", $search_query, $search_query);
- $sql_artigos->execute();
- $result_artigos = $sql_artigos->get_result();
+// Preparar a consulta para Equipes
+if (empty($query)) {
+    $sql_artigos = $conn->prepare("SELECT * FROM artigo");
+} else {
+    $sql_artigos = $conn->prepare("SELECT * FROM artigos WHERE titulo LIKE ? OR conteudo LIKE ?");
+    $sql_artigos->bind_param("ss", $search_artigos, $search_artigos);
+}
 
+// Executar a consulta
+$sql_artigos->execute();
+$result_artigos = $sql_artigos->get_result();
 ?>
 
 <!DOCTYPE html>

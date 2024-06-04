@@ -2,9 +2,6 @@
 // Incluir o arquivo de conexão
 include 'conexao.php';
 
-// Obter o termo de pesquisa
-$query = isset($_GET['query']) ? $_GET['query'] : '';
-
 
 // Preparar a consulta para Perfis de Usuário
 $sql_perfis = $conn->prepare("SELECT * FROM usuarios WHERE nome LIKE ?");
@@ -13,6 +10,24 @@ $sql_perfis->bind_param("s", $search_query);
 $sql_perfis->execute();
 $result_perfis = $sql_perfis->get_result();
 
+
+ // Obter o termo de pesquisa
+ $query = isset($_GET['query']) ? $_GET['query'] : '';
+
+ // Ajustar o termo de pesquisa para SQL
+ $search_usuario = '%' . $query . '%';
+ 
+ // Preparar a consulta para Equipes
+ if (empty($query)) {
+     $sql_usuario = $conn->prepare("SELECT * FROM usuarios");
+ } else {
+     $sql_usuario = $conn->prepare("SELECT * FROM usuarios WHERE nome LIKE ?");
+     $sql_usuario->bind_param("s", $search_usuario);
+ }
+ 
+ // Executar a consulta
+ $sql_usuario->execute();
+ $result_usuario = $sql_usuario->get_result();
 ?>
 
 <!DOCTYPE html>

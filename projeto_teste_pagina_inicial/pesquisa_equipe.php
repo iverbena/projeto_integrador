@@ -5,9 +5,18 @@ include 'conexao.php';
 // Obter o termo de pesquisa
 $query = isset($_GET['query']) ? $_GET['query'] : '';
 
+// Ajustar o termo de pesquisa para SQL
+$search_equipe = '%' . $query . '%';
+
 // Preparar a consulta para Equipes
- $sql_equipes = $conn->prepare("SELECT * FROM equipes WHERE nome LIKE ? OR descricao LIKE ?");
-$sql_equipes->bind_param("ss", $search_equipe, $search_equipe);
+if (empty($query)) {
+    $sql_equipes = $conn->prepare("SELECT * FROM equipes");
+} else {
+    $sql_equipes = $conn->prepare("SELECT * FROM equipes WHERE nome LIKE ? OR descricao LIKE ?");
+    $sql_equipes->bind_param("ss", $search_equipe, $search_equipe);
+}
+
+// Executar a consulta
 $sql_equipes->execute();
 $result_equipes = $sql_equipes->get_result();
 ?>

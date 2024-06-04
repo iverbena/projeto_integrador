@@ -1,9 +1,14 @@
 <?php
 
-include('protect.php')
-
 //http://localhost/integrador/projeto_teste_login/index.php
+
+session_start();
+
+// Recuperar o user_id e o user_name da sessão
+$user_id = $_SESSION['user_id'];
+$user_name = $_SESSION['user_name'];
 ?>
+
 
 
 <!DOCTYPE html>
@@ -36,15 +41,18 @@ include('protect.php')
         <!--Imagem de perfil-->
         <img src="../imagens\jogador.jpeg" alt="" width="100%">
         <p>Nome de usuario</p>
+                <p><?php echo htmlspecialchars($user_name); ?></p>
+        </section>
     </section>
     <section id="conteudo_principal">
         <article>
             <h3>EQUIPES</h3>
             <nav class="sinza">
-                    <button><a href="../menu_do_site/equipes.html">Criar Equipe</a></button>
+                    <button><a href="criar_equipes.php">Criar Equipe</a></button>
                     <form action="pesquisa_equipe.php" method="get">
-                    <input type="text" name="query" placeholder="Digite sua pesquisa..." required>
-                     <button type="submit">Pesquisar</button>
+                    <input type="text" name="query" placeholder="informe o nome da equipe ou aperte espaço" required>
+                    <p>Informe o nome da equipe ou insira espaço</p>
+                        <button type="submit">Pesquisar</button>
                     </form>
             </nav>
         </article>
@@ -53,10 +61,11 @@ include('protect.php')
             <article>
                 <h3>ARTIGOS</h3>
                 <nav class="sinza">
-                <button><a href="../menu_do_site/artigos.html">Criar Artigo</a></button>
+                <button><a href="criar_artigo.php">Criar Artigo</a></button>
                 <form action="pesquisa_artigo.php" method="get">
-                    <input type="text" name="query" placeholder="Digite sua pesquisa..." required>
-                     <button type="submit">Pesquisar</button>
+                    <input type="text" name="query" placeholder="informe o nome do Artigo ou aperte espaço" required>
+                    <p>Informe o nome do Artigo ou insira espaço</p>
+                        <button type="submit">Pesquisar</button>
                     </form>
             </nav>
         </article>
@@ -65,8 +74,9 @@ include('protect.php')
                 <h3>PESQUISA USUARIO</h3>
                 <nav class="sinza">
                 <form action="pesquisa_usuario.php" method="get">
-                    <input type="text" name="query" placeholder="Digite sua pesquisa..." required>
-                     <button type="submit">Pesquisar</button>
+                    <input type="text" name="query" placeholder="informe o nome do(a) Usuario(a) ou aperte espaço" required>
+                    <p>Informe o nome do(a) USUARIO(a)ou insira espaço</p>
+                        <button type="submit">Pesquisar</button>
                     </form>
             </nav>
         </article>
