@@ -1,15 +1,15 @@
 <?php
 include 'db.php';
 
-$sql = "SELECT articles.id, articles.title, articles.content, users.username, articles.created_at FROM articles JOIN users ON articles.user_id = users.id ORDER BY articles.created_at DESC";
+$sql = "SELECT artigos.id, artigos.titulo, artigos.conteudo, usuarios.nome, artigos.criado_em FROM artigos JOIN usuarios ON artigos.idUsuario = usuarios.id ORDER BY artigos.criado_em DESC";
 $stmt = $conn->prepare($sql);
 $stmt->execute();
-$articles = $stmt->fetchAll();
+$artigos = $stmt->fetchAll();
 
-foreach ($articles as $article) {
-    echo "<h2>" . htmlspecialchars($article['title']) . "</h2>";
-    echo "<p>By " . htmlspecialchars($article['username']) . " on " . htmlspecialchars($article['created_at']) . "</p>";
-    echo "<p>" . nl2br(htmlspecialchars($article['content'])) . "</p>";
+foreach ($articgos as $artigo) {
+    echo "<h2>" . htmlspecialchars($artigo['titulo']) . "</h2>";
+    echo "<p>By " . htmlspecialchars($artigo['mone']) . " on " . htmlspecialchars($artigo['criado_em']) . "</p>";
+    echo "<p>" . nl2br(htmlspecialchars($article['conteudo'])) . "</p>";
     echo "<hr>";
 }
 ?>

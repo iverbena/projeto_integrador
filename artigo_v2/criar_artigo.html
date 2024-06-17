@@ -34,16 +34,16 @@
             <h3>Escreva um artigo</h3>
             <br><br>
             <form action="create_article.php" method="post">
-                <input type="hidden" name="user_id" value="1"> <!-- Assumindo que o ID do usuário é 1 -->
-                <label for="title">Titulo:</label>
+                <input type="hidden" name="id" value="1"> <!-- Assumindo que o ID do usuário é 1 -->
+                <label for="titulo">Titulo:</label>
                 <br><br>
-                <input type="text" id="title" name="title" required>
+                <input type="text" id="titulo" name="titulo" required>
                 <br><br>
-                <label for="content">Conteudo:</label>
+                <label for="conteudo">Conteudo:</label>
                 <br><br>
-                <textarea id="mytextarea" name="content"></textarea>
+                <textarea id="mytextarea" name="conteudo"></textarea>
                 <br><br>
-                <input type="submit" value="Create Article">
+                <input type="submit" value="Criar Artigo">
             </form>
     </section>
 </body>
