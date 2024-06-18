@@ -51,7 +51,7 @@ $user_name = $_SESSION['user_name'];
             <nav class="sinza">                        
                     <p>Informe o nome da equipe ou insira espaço:</p>
                             <i class="bi bi-search"></i>
-                            <input type="text" name="query" placeholder="informe o nome da equipe ou aperte espaço" required>
+                            <input  id="barra" type="text" name="query" placeholder="informe o nome da equipe ou aperte espaço" required>
                     <button type="submit">Pesquisar</button>   
                     <button><a href="criar_equipes.php">Criar Equipe</a></button>                    
                     <form action="pesquisa_equipe.php" method="get"></form>
@@ -64,7 +64,7 @@ $user_name = $_SESSION['user_name'];
                 <nav class="sinza">
                     <p>Informe o nome do Artigo ou insira espaço</p>
                     <i class="bi bi-search"></i>
-                    <input type="text" name="query" placeholder="informe o nome do Artigo ou aperte espaço" required> 
+                    <input  id="barra" type="text" name="query" placeholder="informe o nome do Artigo ou aperte espaço" required> 
                     <button type="submit">Pesquisar</button>
                     <button><a href="criar_artigo.php">Criar Artigo</a></button>
                     <form action="pesquisa_artigo.php" method="get"></form>                
@@ -76,7 +76,7 @@ $user_name = $_SESSION['user_name'];
                 <nav class="sinza">
                     <p>Informe o nome do(a) USUARIO(a)ou insira espaço:</p>
                     <i class="bi bi-search"></i>
-                    <input type="text" name="query" placeholder="informe o nome do(a) Usuario(a) ou aperte espaço" required>   
+                    <input  id="barra" type="text" name="query" placeholder="informe o nome do(a) Usuario(a) ou aperte espaço" required>   
                     <button type="submit">Pesquisar</button>
                     <form action="pesquisa_usuario.php" method="get"></form>
                 </nav>
