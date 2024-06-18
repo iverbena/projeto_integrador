@@ -66,10 +66,12 @@ button:hover{
     background-color: #834cb1;
 }
 
+
 nav.sinza {
     background-color: lightgray;
     padding: 40px;
     border-radius: 15px;
+    position: relative;
 }
 
 .sinza button {
@@ -78,7 +80,14 @@ nav.sinza {
     margin-bottom: 20px;
     margin-left: 60px;
     margin-right: 75px;
+    border-radius: 5px;
 }
+
+.zinsa p {
+    align-items: center;
+}
+
+
 nav {
     background-color: lightgray;
     padding: 15px;  
@@ -96,7 +105,6 @@ nav ul li:last-child {
 }
 
 nav ul li ul {
-    float: right;
     display: inline-block;
     margin-right: 10px;
 }
@@ -115,13 +123,13 @@ nav ul li ul {
     height: 100px;
     border-radius: 50%;
     margin-bottom: 10px;
-    margin-left: 7%;
+    margin-left: 15%;
 }
 
 #barra_lateral p {
     font-weight: bold;
     margin-bottom: 10px;
-    margin-left: 20%;
+    margin-left: 5%;
 }
 
  ul {
