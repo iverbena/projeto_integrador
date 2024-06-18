@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sucesso!</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body">
+<img src="../Imagens/logo.png" alt="" id="logo">
     <section style="background-color: lightgrey;">
         <h1>CADASTRO REALIZADO COM SUCESSO!</h1>
         <div id="imagem">
