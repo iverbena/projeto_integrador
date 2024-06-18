@@ -108,8 +108,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </form>
             <?php else: ?>
                 <h3>Join or Leave Team</h3>
-                <form action="view_team.php?id_equipe=<?php echo $team_id; ?>" method="post">
-                    <?php if ($eh_member): ?>
+                <form action="view_team.php?id_equipe=<?php echo $id_equipe; ?>" method="post">
+                    <?php if ($eh_membro): ?>
                         <input type="submit" name="deixar_equipe" value="Deixar Equipe">
                     <?php else: ?>
                         <input type="submit" name="entrar_equipe" value="Entrar">
