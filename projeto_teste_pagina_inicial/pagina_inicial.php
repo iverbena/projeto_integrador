@@ -18,6 +18,7 @@ $user_name = $_SESSION['user_name'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../Imagens/logo.png" type="logo/x-icon">
     <title>Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="inicial.css">
     <style>
         body {
@@ -46,40 +47,41 @@ $user_name = $_SESSION['user_name'];
     </section>
     <section id="conteudo_principal">
         <article>
-            <h3>EQUIPES</h3>
-            <nav class="sinza">
-                    <button><a href="criar_equipes.php">Criar Equipe</a></button>
-                    <form action="pesquisa_equipe.php" method="get">
-                    <input type="text" name="query" placeholder="informe o nome da equipe ou aperte espaço" required>
-                    <p>Informe o nome da equipe ou insira espaço</p>
-                        <button type="submit">Pesquisar</button>
-                    </form>
+            <h3>EQUIPES:</h3>
+            <nav class="sinza">                        
+                    <p>Informe o nome da equipe ou insira espaço:</p>
+                            <i class="bi bi-search"></i>
+                            <input type="text" name="query" placeholder="informe o nome da equipe ou aperte espaço" required>
+                    <button type="submit">Pesquisar</button>   
+                    <button><a href="criar_equipes.php">Criar Equipe</a></button>                    
+                    <form action="pesquisa_equipe.php" method="get"></form>
             </nav>
         </article>
         <br><br>
         <article>
             <article>
-                <h3>ARTIGOS</h3>
+                <h3>ARTIGOS:</h3>
                 <nav class="sinza">
-                <button><a href="criar_artigo.php">Criar Artigo</a></button>
-                <form action="pesquisa_artigo.php" method="get">
-                    <input type="text" name="query" placeholder="informe o nome do Artigo ou aperte espaço" required>
                     <p>Informe o nome do Artigo ou insira espaço</p>
-                        <button type="submit">Pesquisar</button>
-                    </form>
-            </nav>
+                    <i class="bi bi-search"></i>
+                    <input type="text" name="query" placeholder="informe o nome do Artigo ou aperte espaço" required> 
+                    <button type="submit">Pesquisar</button>
+                    <button><a href="criar_artigo.php">Criar Artigo</a></button>
+                    <form action="pesquisa_artigo.php" method="get"></form>                
+                </nav>
         </article>
         <article>
             <article>
-                <h3>PESQUISA USUARIO</h3>
+                <h3>PESQUISA USUARIO:</h3>
                 <nav class="sinza">
-                <form action="pesquisa_usuario.php" method="get">
-                    <input type="text" name="query" placeholder="informe o nome do(a) Usuario(a) ou aperte espaço" required>
-                    <p>Informe o nome do(a) USUARIO(a)ou insira espaço</p>
-                        <button type="submit">Pesquisar</button>
-                    </form>
-            </nav>
+                    <p>Informe o nome do(a) USUARIO(a)ou insira espaço:</p>
+                    <i class="bi bi-search"></i>
+                    <input type="text" name="query" placeholder="informe o nome do(a) Usuario(a) ou aperte espaço" required>   
+                    <button type="submit">Pesquisar</button>
+                    <form action="pesquisa_usuario.php" method="get"></form>
+                </nav>
         </article>
     </section>
 </body>
 </html>
+
