@@ -24,8 +24,8 @@ if ($login_falhou) {
     <section>
         <h1>LOGIN</h1>
         <form action="BDlogin.php" method="post">
-            <label for="usuario">Usuario: </label>
-            <input type="text" name="username" id="nome">
+            <label for="e-mail">E-mail: </label>
+            <input type="text" name="email" id="email">
             <br>
             <label for="senha">Senha:</label>
             <input type="password" name="password" id="senha">

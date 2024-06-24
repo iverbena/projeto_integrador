@@ -8,13 +8,13 @@ $action = isset($_POST['action']) ? $_POST['action'] : '';
 
 if ($action == 'Login') {
     // Processar Login
-    $username = $_POST['username'];
+    $email = $_POST['email'];
     $password = $_POST['password'];
 
  // Consulta para verificar se o usuário existe
- $sql = "SELECT id, nome FROM usuarios WHERE nome=? AND senha=?";
+ $sql = "SELECT id, nome FROM usuarios WHERE email=? AND senha=? ";
  $stmt = $conn->prepare($sql);
- $stmt->bind_param("ss", $username, $password);
+ $stmt->bind_param('ss', $email, $password);
  $stmt->execute();
  $result = $stmt->get_result();
 
@@ -26,11 +26,11 @@ if ($action == 'Login') {
      $_SESSION['user_name'] = $row['nome']; // Salvar o ID do usuário na sessão
      header('Location: ../projeto_teste_pagina_inicial/pagina_inicial.php'); // Redirecionar para a página do painel de controle
      exit();
- } else {
+    } else {
      // Login falhou, redirecionar de volta com parâmetro de erro
      header('Location: ../projeto_teste_login/index.php?login_falhou=true');
      exit();
- }
+    }
 } elseif ($action == 'Cadastro') {
  // Redirecionar para a página de registro
  header('Location: ../pagina_de_cadastro/cadastro.php');
