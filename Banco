@@ -1,0 +1,24 @@
+create database projeto_liga;
+use projeto_liga;
+
+CREATE TABLE usuario (
+  id_usuario INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(50) NOT NULL,
+  email VARCHAR(50) NOT NULL UNIQUE,
+  senha VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE equipe (
+    id_equipe INT AUTO_INCREMENT PRIMARY KEY,
+    nome_equipe VARCHAR(50) NOT NULL UNIQUE,
+    criador INT,
+    FOREIGN KEY (criador) REFERENCES id_usuario(id)
+);
+
+CREATE TABLE membro (
+    equipe INT,
+    usuario INT,
+    FOREIGN KEY (id_equipe) REFERENCES equipe(id_equipe),
+    FOREIGN KEY (usuario) REFERENCES usuario(id_usuario),
+    PRIMARY KEY (equipe, usuario)
+);
